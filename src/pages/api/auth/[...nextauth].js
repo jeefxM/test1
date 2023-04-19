@@ -12,7 +12,6 @@ export default NextAuth({
   // session: {
   //   strategy: "jwt",
   // },
-  adapter: PrismaAdapter(prisma),
 
   providers: [
     GoogleProvider({
