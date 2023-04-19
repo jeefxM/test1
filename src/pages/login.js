@@ -77,13 +77,13 @@ const Login = () => {
 
 export const getServerSideProps = async (context) => {
   const session = await getSession(context);
-  // if (session) {
-  //   return {
-  //     redirect: {
-  //       destination: "/profile",
-  //     },
-  //   };
-  // }
+  if (session) {
+    return {
+      redirect: {
+        destination: "/profile",
+      },
+    };
+  }
   return {
     props: {
       session,
