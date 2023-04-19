@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --viewport-width: 100vw;
+}
+
+#slatez {
+  background-image: url("../../public/slate2.svg");
+  background-size: cover;
+  background-position: 100% 65%;
+  background-position-x: 0;
+  animation: moveSlate infinite linear  15s ;
+  
+}
+
+@keyframes moveSlate {
+  0% {
+    background-position-x: 1;
+  }
+  100% {
+    background-position-x: var(--viewport-width);
+  }
+ 
+ 
+}
+
+.discountbtn {
+  animation: textanimation 3s linear infinite;
+  background: linear-gradient(to right, #8a2be2, #00f5a0, #8a2be2);
+  background-size: 200%;
+  position: relative;
+  display: inline-block;
+}
+
+
+.logo {
+  animation: textanimation 3s linear infinite;
+  background: linear-gradient(to right, #8a2be2, #00f5a0, #8a2be2);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes textanimation {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ .aipicker-container {
+  @apply absolute left-full ml-3 glassmorphism p-3 w-[195px] h-[220px] rounded-md flex flex-col gap-4;
+}
+
+.aipicker-textarea {
+  @apply w-full bg-[transparent] text-sm border border-hover p-2 outline-none flex-1;
+}
+
+ .filepicker-label {
+  @apply border border-button py-1.5 px-2 rounded-md shadow-sm text-xs text-black dark:text-white focus:outline-none focus:ring-1 focus:ring-button focus:border-button cursor-pointer w-fit;
+}
+
+ .filepicker-container {
+  @apply absolute left-full ml-3 glassmorphism p-3 w-[195px] h-[220px] flex flex-col rounded-md;
+}
+
+ .tab-btn {
+  @apply w-14 h-14 flex justify-center items-center cursor-pointer select-none;
+}
+
+.editortabs-container {
+  @apply glassmorphism w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-1 py-4 gap-4;
+}
+
+.filtertabs-container {
+  @apply absolute z-10 bottom-5 right-0  w-full flex justify-center items-center flex-wrap gap-4;
+}
+
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input[type="file"] {
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+
+.sketch-picker {
+  width: 170px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 6px !important;
+}
+
+.sketch-picker > div:nth-child(3) {
+  display: none !important;
+}
