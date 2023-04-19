@@ -8,9 +8,9 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export default NextAuth({
-  session: {
-    strategy: "jwt",
-  },
+  // session: {
+  //   strategy: "jwt",
+  // },
   adapter: PrismaAdapter(prisma),
 
   providers: [
