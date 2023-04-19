@@ -2,6 +2,7 @@ import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import prisma from "@/utils/database/dbJeefx";
 import { compare } from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
 
@@ -11,7 +12,7 @@ export default NextAuth({
   // session: {
   //   strategy: "jwt",
   // },
-  // adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(prisma),
 
   providers: [
     GoogleProvider({
